@@ -1,0 +1,74 @@
+{
+  "name": "@basis-theory/react-elements",
+  "version": "1.5.0",
+  "repository": "https://github.com/basis-theory/react-elements",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Basis Theory",
+    "email": "support@basistheory.com"
+  },
+  "source": "src/index.ts",
+  "module": "dist/module/module.js",
+  "main": "dist/main/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:dev": "yarn clean && yarn generateTypes && parcel build && npx size-limit",
+    "build": "node ../scripts/react-elements/prepare.js && yarn generateTypes && parcel build --no-cache",
+    "clean": "rimraf dist .parcel-cache",
+    "generateTypes": "tsc --emitDeclarationOnly",
+    "lint-staged": "lint-staged",
+    "lint:fix": "eslint --fix",
+    "lint": "eslint",
+    "size": "size-limit",
+    "test": "jest",
+    "watch": "parcel watch"
+  },
+  "targets": {
+    "main": {
+      "isLibrary": true,
+      "sourceMap": false
+    },
+    "module": {
+      "isLibrary": true,
+      "sourceMap": false
+    },
+    "types": {
+      "isLibrary": true,
+      "sourceMap": false
+    }
+  },
+  "alias": {},
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
+  "size-limit": [
+    {
+      "path": "dist/main/index.js",
+      "limit": "25 KB"
+    },
+    {
+      "path": "dist/module/module.js",
+      "limit": "25 KB"
+    }
+  ],
+  "dependencies": {
+    "@basis-theory/basis-theory-js": "^4.27.0",
+    "@basis-theory/web-elements": "*"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@parcel/packager-ts": "2.13.2",
+    "@parcel/transformer-typescript-types": "2.13.3",
+    "@size-limit/preset-small-lib": "^11.1.6",
+    "parcel": "^2.13.2",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.2"
+  }
+}

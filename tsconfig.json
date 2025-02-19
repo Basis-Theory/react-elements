@@ -1,0 +1,16 @@
+{
+  "include": ["src/**/*"],
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "jsx": "react",
+    "outDir": "dist/types",
+    "paths": {
+      "~/*": ["src/*"],
+      "@basis-theory/web-elements": ["../web-elements/src"]
+    },
+    "target": "ESNext",
+    "types": ["node", "jest"]
+  }
+}
