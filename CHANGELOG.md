@@ -1,3 +1,9 @@
+## [1.7.1] - 2025-02-20
+
+### Bug Fixes
+
+- ff9923a 2025-02-19 fix: update package version upon release (#393) by kevin@basistheory.com
+
 ## [1.7.0] - 2025-02-19
 
 ### Features
