@@ -1,3 +1,9 @@
+## [1.7.2] - 2025-02-20
+
+### Bug Fixes
+
+- 992b619 2025-02-20 fix(react-elements): sync version upon release (#394) by kevin@basistheory.com
+
 ## [1.7.1] - 2025-02-20
 
 ### Bug Fixes
