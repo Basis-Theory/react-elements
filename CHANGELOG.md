@@ -1,3 +1,9 @@
+## [1.8.0] - 2025-03-07
+
+### Features
+
+- 0a14886 2025-03-07 feat(eng-8106): adding issuerCountry field into token intent model (#396) by 62716969+washluis-alencar@users.noreply.github.com
+
 ## [1.7.3] - 2025-03-07
 
 ### Bug Fixes
