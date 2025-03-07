@@ -1,3 +1,9 @@
+## [1.7.3] - 2025-03-07
+
+### Bug Fixes
+
+- ccf800e 2025-03-05 fix: revert createServiceRequestPayload by kevin@basistheory.com
+
 ## [1.7.2] - 2025-02-20
 
 ### Bug Fixes
