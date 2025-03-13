@@ -1,3 +1,17 @@
+## [1.9.0] - 2025-03-13
+
+### Features
+
+- 4e13acd 2025-03-12 feat: generate versioned SRI for web-elements loader (#399) by kevin@basistheory.com
+
+### Bug Fixes
+
+- c148762 2025-03-13 fix: add dd rum url to csp (#400) by kevin@basistheory.com
+
+### Chores
+
+- dfc875d 2025-03-10 chore: add Elements PCI inventory script to PR check (#397) by brandon@basistheory.com
+
 ## [1.8.0] - 2025-03-07
 
 ### Features
