@@ -1,3 +1,15 @@
+## [1.10.0] - 2025-03-18
+
+### Features
+
+- be57c49 2025-03-18 feat: enable same origin api calls by default (#401) by kevin@basistheory.com
+- 440fd31 2025-03-13 feat: add sri hash generation for static iframe assets (#398) by kevin@basistheory.com
+
+### Bug Fixes
+
+- be4129d 2025-03-18 fix: elements init options ordered incorrectly (#403) by kevin@basistheory.com
+- 6c0271f 2025-03-18 fix: patch axios (#402) by kevin@basistheory.com
+
 ## [1.9.0] - 2025-03-13
 
 ### Features
