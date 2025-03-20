@@ -1,3 +1,9 @@
+## [1.11.1] - 2025-03-20
+
+### Bug Fixes
+
+- 46b4c73 2025-03-20 fix: export web elements from `types` path (#405) by kevin@basistheory.com
+
 ## [1.11.0] - 2025-03-20
 
 ### Features

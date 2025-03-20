@@ -1,1 +1,1 @@
-export * from '@basis-theory/basis-theory-js/types/elements';
+export type * from '@basis-theory/web-elements';
