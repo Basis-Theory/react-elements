@@ -1,17 +1,17 @@
 import React, { FC, useRef, ForwardedRef, MutableRefObject } from 'react';
 import type {
+  BasisTheoryElements,
+  Brand,
   CardVerificationCodeElement as ICardVerificationCodeElement,
+  CardVerificationCodeElementEvents,
+  CopyIconStyles,
   CreateCardVerificationCodeElementOptions,
   ElementEventListener,
   ElementStyle,
-  CardVerificationCodeElementEvents,
-  Brand,
   InputMode,
-  CopyIconStyles,
-} from '@basis-theory/basis-theory-js/types/elements';
+} from '@basis-theory/web-elements';
 import { useElement } from './useElement';
 import { useListener } from './useListener';
-import type { BasisTheoryElements } from '@basis-theory/web-elements';
 
 interface CardVerificationCodeElementProps {
   'aria-label'?: string;

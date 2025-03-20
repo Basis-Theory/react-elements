@@ -1,15 +1,15 @@
 import React, { FC, useRef, ForwardedRef, MutableRefObject } from 'react';
 import type {
-  TextElement as ITextElement,
+  BasisTheoryElements,
   CreateTextElementOptions,
   ElementEventListener,
   ElementStyle,
-  TextElementEvents,
   InputMode,
-} from '@basis-theory/basis-theory-js/types/elements';
+  TextElement as ITextElement,
+  TextElementEvents,
+} from '@basis-theory/web-elements';
 import { useElement } from './useElement';
 import { useListener } from './useListener';
-import type { BasisTheoryElements } from '@basis-theory/web-elements';
 
 interface BaseTextElementProps {
   'aria-label'?: string;

@@ -15,6 +15,7 @@ describe('useBasisTheoryValue', () => {
   });
 
   test('should return undefined when no instance is available', () => {
+    // @ts-expect-error
     jest.mocked(useBasisTheory).mockReturnValue({});
     const { result } = renderHook(() => useBasisTheoryValue());
 

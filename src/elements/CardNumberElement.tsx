@@ -1,18 +1,18 @@
 import React, { FC, useRef, ForwardedRef, MutableRefObject } from 'react';
 import type {
+  BasisTheoryElements,
   CardNumberElement as ICardNumberElement,
+  CardNumberElementEvents,
+  CopyIconStyles,
   CreateCardNumberElementOptions,
+  CreditCardType,
   ElementEventListener,
   ElementStyle,
-  CardNumberElementEvents,
-  SanitizedElementOptions,
   InputMode,
-  CreditCardType,
-  CopyIconStyles,
-} from '@basis-theory/basis-theory-js/types/elements';
+  SanitizedElementOptions,
+} from '@basis-theory/web-elements';
 import { useElement } from './useElement';
 import { useListener } from './useListener';
-import type { BasisTheoryElements } from '@basis-theory/web-elements';
 
 interface CardNumberElementProps {
   'aria-label'?: string;

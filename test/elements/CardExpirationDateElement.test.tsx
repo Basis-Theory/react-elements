@@ -5,8 +5,10 @@ import type {
   ElementStyle,
   InputMode,
   CopyIconStyles,
-} from '@basis-theory/basis-theory-js/types/elements';
+} from '@basis-theory/web-elements';
 import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { expect } from '@jest/globals';
 import { Chance } from 'chance';
 import { CardExpirationDateElement } from '../../src';
 import { useElement } from '../../src/elements/useElement';

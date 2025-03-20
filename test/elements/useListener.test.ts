@@ -1,8 +1,7 @@
-import type {
-  BaseElement,
-  EventType,
-} from '@basis-theory/basis-theory-js/types/elements';
+import type { BaseElement, EventType } from '@basis-theory/web-elements';
 import { renderHook } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { expect } from '@jest/globals';
 import { Chance } from 'chance';
 import { useListener } from '../../src/elements/useListener';
 

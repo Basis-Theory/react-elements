@@ -1,17 +1,17 @@
 import React, { FC, ForwardedRef, MutableRefObject, useRef } from 'react';
 import type {
+  BasisTheoryElements,
   CardExpirationDateElement as ICardExpirationDateElement,
+  CardExpirationDateElementEvents,
+  CardExpirationDateValue,
+  CopyIconStyles,
   CreateCardExpirationDateElementOptions,
   ElementEventListener,
   ElementStyle,
-  CardExpirationDateElementEvents,
-  CardExpirationDateValue,
   InputMode,
-  CopyIconStyles,
-} from '@basis-theory/basis-theory-js/types/elements';
+} from '@basis-theory/web-elements';
 import { useElement } from './useElement';
 import { useListener } from './useListener';
-import type { BasisTheoryElements } from '@basis-theory/web-elements';
 
 interface CardExpirationDateElementProps {
   'aria-label'?: string;

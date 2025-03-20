@@ -7,10 +7,10 @@ import React, {
 } from 'react';
 import type {
   BaseElement,
+  BasisTheoryElements,
   ElementType,
-} from '@basis-theory/basis-theory-js/types/elements';
+} from '@basis-theory/web-elements';
 import { useBasisTheoryValue } from './useBasisTheoryValue';
-import type { BasisTheoryElements } from '@basis-theory/web-elements';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type ElementWithSetValueRef = BaseElement<any, any> & {

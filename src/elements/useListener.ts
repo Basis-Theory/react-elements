@@ -4,7 +4,7 @@ import type {
   ElementEventListener,
   EventType,
   Subscription,
-} from '@basis-theory/basis-theory-js/types/elements';
+} from '@basis-theory/web-elements';
 
 const useListener = <
   T extends EventType,

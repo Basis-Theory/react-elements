@@ -1,14 +1,16 @@
 import * as React from 'react';
-import { CARD_BRANDS } from '@basis-theory/basis-theory-js/elements/constants';
 import type {
   Brand,
   CopyIconStyles,
   ElementStyle,
   CardVerificationCodeElement as ICardVerificationCodeElement,
   InputMode,
-} from '@basis-theory/basis-theory-js/types/elements';
+} from '@basis-theory/web-elements';
+import '@testing-library/jest-dom';
+import { expect } from '@jest/globals';
 import { render } from '@testing-library/react';
 import { Chance } from 'chance';
+import { CARD_BRANDS } from '@basis-theory/web-elements';
 import { CardVerificationCodeElement } from '../../src';
 import { useElement } from '../../src/elements/useElement';
 import { useListener } from '../../src/elements/useListener';

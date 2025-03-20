@@ -5,7 +5,9 @@ import type {
   CreateCardNumberElementOptions,
   InputMode,
   CopyIconStyles,
-} from '@basis-theory/basis-theory-js/types/elements';
+} from '@basis-theory/web-elements';
+import '@testing-library/jest-dom';
+import { expect } from '@jest/globals';
 import { render } from '@testing-library/react';
 import { Chance } from 'chance';
 import { CardNumberElement } from '../../src';

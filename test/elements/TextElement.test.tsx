@@ -3,7 +3,9 @@ import type {
   TextElement as ITextElement,
   ElementStyle,
   InputMode,
-} from '@basis-theory/basis-theory-js/types/elements';
+} from '@basis-theory/web-elements';
+import '@testing-library/jest-dom';
+import { expect } from '@jest/globals';
 import { render } from '@testing-library/react';
 import { Chance } from 'chance';
 import { TextElement } from '../../src';

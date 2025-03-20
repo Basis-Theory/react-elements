@@ -1,5 +1,5 @@
 const { pathsToModuleNameMapper } = require('ts-jest');
-const { compilerOptions } = require('./tsconfig');
+const { compilerOptions } = require('./tsconfig.jest');
 
 module.exports = {
   projects: [
@@ -9,16 +9,33 @@ module.exports = {
       coveragePathIgnorePatterns: ['test', 'dist'],
       displayName: 'jsdom',
       moduleNameMapper: {
-        ...pathsToModuleNameMapper(compilerOptions.paths, {
-          prefix: '<rootDir>/',
-        }),
+        ...pathsToModuleNameMapper(
+          {
+            '~/*': ['src/*'],
+            '@basis-theory/web-elements': ['../web-elements/src'],
+          },
+          {
+            prefix: '<rootDir>/',
+          }
+        ),
         '^@basis-theory/web-elements$': '<rootDir>/../web-elements/src',
       },
       modulePaths: ['<rootDir>'],
       roots: ['<rootDir>'],
       testEnvironment: 'jsdom',
       testPathIgnorePatterns: ['cypress'],
-      transform: { '^.+\\.(t|j)sx?$': ['@swc/jest'] },
+      transform: {
+        '^.+\\.(t|j)sx?$': [
+          '@swc/jest',
+          { jsc: { parser: { syntax: 'typescript' } } },
+        ],
+      },
+      setupFilesAfterEnv: ['<rootDir>/test/setup.ts'],
+      globals: {
+        'ts-jest': {
+          tsconfig: 'tsconfig.jest.json',
+        },
+      },
     },
   ],
 };

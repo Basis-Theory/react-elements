@@ -1,5 +1,6 @@
 import React, { FC, useRef, ForwardedRef } from 'react';
-import {
+import type {
+  BasisTheoryElements,
   CardElement as ICardElement,
   CardElementEvents,
   CardElementPlaceholder,
@@ -10,10 +11,9 @@ import {
   ElementEventListener,
   ElementStyle,
   InputMode,
-} from '@basis-theory/basis-theory-js/types/elements';
+} from '@basis-theory/web-elements';
 import { useElement } from './useElement';
 import { useListener } from './useListener';
-import type { BasisTheoryElements } from '@basis-theory/web-elements';
 
 interface CardElementProps {
   autoComplete?: CreateCardElementOptions['autoComplete'];

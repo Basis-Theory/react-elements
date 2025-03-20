@@ -1,3 +1,9 @@
+## [1.11.0] - 2025-03-20
+
+### Features
+
+- 5e3c058 2025-03-20 feat: re-export types from web elements (#404) by kevin@basistheory.com
+
 ## [1.10.0] - 2025-03-18
 
 ### Features
