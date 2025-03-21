@@ -1,3 +1,9 @@
+## [1.11.2] - 2025-03-21
+
+### Bug Fixes
+
+- 3bb6965 2025-03-20 fix: data-element mounting (#406) by kevin@basistheory.com
+
 ## [1.11.1] - 2025-03-20
 
 ### Bug Fixes
