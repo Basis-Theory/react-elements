@@ -1,3 +1,9 @@
+## [1.11.3] - 2025-03-21
+
+### Bug Fixes
+
+- 0ec13fd 2025-03-21 fix: types path (#407) by kevin@basistheory.com
+
 ## [1.11.2] - 2025-03-21
 
 ### Bug Fixes
