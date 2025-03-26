@@ -7,6 +7,9 @@
     "jsx": "react",
     "outDir": "dist/types",
     "target": "ESNext",
-    "types": ["node", "jest"]
+    "types": ["node", "jest"],
+    "paths": {
+      "@basis-theory/web-elements": ["../web-elements/src"]
+    }
   }
 }

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type {
-  TextElement as ITextElement,
+  ITextElement,
   ElementStyle,
   InputMode,
 } from '@basis-theory/web-elements';
@@ -35,6 +35,7 @@ describe('TextElement', () => {
   let placeholder: string;
   let transform: RegExp;
   let value: string;
+  let validateOnChange: boolean;
   let validation: RegExp;
   let onReady: jest.Mock;
   let onChange: jest.Mock;
@@ -64,6 +65,7 @@ describe('TextElement', () => {
       })
     );
     maxLength = chance.integer();
+    validateOnChange = chance.bool();
     placeholder = chance.string();
     transform = chance.pickone([/\d/u, /./u]);
     inputMode = 'numeric';
@@ -104,6 +106,7 @@ describe('TextElement', () => {
         ref={ref}
         style={style}
         transform={transform}
+        validateOnChange={validateOnChange}
         validation={validation}
         value={value}
         valueRef={valueRef}
@@ -129,6 +132,7 @@ describe('TextElement', () => {
         readOnly,
         transform,
         value,
+        validateOnChange,
         validation,
       },
       undefined,

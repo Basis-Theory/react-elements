@@ -1,7 +1,7 @@
 import React, { FC, useRef, ForwardedRef, MutableRefObject } from 'react';
 import type {
   BasisTheoryElements,
-  CardNumberElement as ICardNumberElement,
+  ICardNumberElement,
   CardNumberElementEvents,
   CopyIconStyles,
   CreateCardNumberElementOptions,

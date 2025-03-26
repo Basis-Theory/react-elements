@@ -1,3 +1,17 @@
+## [1.11.4] - 2025-03-26
+
+### Bug Fixes
+
+- 50b67d0 2025-03-25 fix: move export to its own file (#411) by kevin@basistheory.com
+- 0510ce8 2025-03-25 fix: export web-elements (#410) by kevin@basistheory.com
+- a5b6d8f 2025-03-25 fix(text element): expose validateOnChange (#408) by kevin@basistheory.com
+
+### Chores
+
+- 8203052 2025-03-25 chore: let parcel handle type generation (#414) by kevin@basistheory.com
+- 507db5c 2025-03-25 chore: split type declaration config from build (#413) by kevin@basistheory.com
+- 7fccd68 2025-03-25 chore: upgrade ts (#412) by kevin@basistheory.com
+
 ## [1.11.3] - 2025-03-21
 
 ### Bug Fixes

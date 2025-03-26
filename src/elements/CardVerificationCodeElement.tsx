@@ -2,7 +2,7 @@ import React, { FC, useRef, ForwardedRef, MutableRefObject } from 'react';
 import type {
   BasisTheoryElements,
   Brand,
-  CardVerificationCodeElement as ICardVerificationCodeElement,
+  ICardVerificationCodeElement,
   CardVerificationCodeElementEvents,
   CopyIconStyles,
   CreateCardVerificationCodeElementOptions,

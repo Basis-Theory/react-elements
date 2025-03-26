@@ -1,7 +1,7 @@
 import React, { FC, useRef, ForwardedRef } from 'react';
 import type {
   BasisTheoryElements,
-  CardElement as ICardElement,
+  ICardElement,
   CardElementEvents,
   CardElementPlaceholder,
   CardElementValue,

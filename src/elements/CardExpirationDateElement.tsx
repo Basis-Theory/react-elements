@@ -1,7 +1,7 @@
 import React, { FC, ForwardedRef, MutableRefObject, useRef } from 'react';
 import type {
   BasisTheoryElements,
-  CardExpirationDateElement as ICardExpirationDateElement,
+  ICardExpirationDateElement,
   CardExpirationDateElementEvents,
   CardExpirationDateValue,
   CopyIconStyles,

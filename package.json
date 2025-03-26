@@ -1,6 +1,6 @@
 {
   "name": "@basis-theory/react-elements",
-  "version": "1.11.3",
+  "version": "1.11.4",
   "repository": "https://github.com/basis-theory/react-elements",
   "license": "Apache-2.0",
   "author": {
@@ -15,10 +15,9 @@
     "dist"
   ],
   "scripts": {
-    "build:dev": "yarn clean && parcel build && yarn generateTypes && npx size-limit",
-    "build": "node ../scripts/react-elements/prepare.js && parcel build --no-cache && yarn generateTypes",
+    "build:dev": "yarn clean && parcel build && npx size-limit",
+    "build": "node ../scripts/react-elements/prepare.js && parcel build --no-cache",
     "clean": "rimraf dist .parcel-cache",
-    "generateTypes": "tsc --emitDeclarationOnly",
     "lint-staged": "lint-staged",
     "lint:fix": "eslint --fix",
     "lint": "eslint",
@@ -56,15 +55,15 @@
     }
   ],
   "dependencies": {
-    "@basis-theory/web-elements": "1.11.3"
+    "@basis-theory/web-elements": "1.11.4"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
-    "@parcel/packager-ts": "2.13.2",
-    "@parcel/transformer-typescript-types": "2.13.3",
+    "@parcel/packager-ts": "^2.14.2",
+    "@parcel/transformer-typescript-types": "^2.14.2",
     "@size-limit/preset-small-lib": "^11.1.6",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
@@ -72,10 +71,9 @@
     "@types/react-dom": "^18",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "parcel": "^2.13.2",
+    "parcel": "^2.14.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "ts-jest": "^29.2.5",
-    "typescript": "^5.7.2"
+    "ts-jest": "^29.2.5"
   }
 }
