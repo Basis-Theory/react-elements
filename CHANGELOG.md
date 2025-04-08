@@ -1,3 +1,10 @@
+## [1.11.5] - 2025-04-08
+
+### Bug Fixes
+
+- e89c349 2025-04-04 fix: text element validation and elements masking (#415) by kevin@basistheory.com
+- f4ef076 2025-04-03 fix: avoid dupped elementWindows (#416) by kevin@basistheory.com
+
 ## [1.11.4] - 2025-03-26
 
 ### Bug Fixes
