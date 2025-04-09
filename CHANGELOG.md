@@ -1,3 +1,9 @@
+## [1.11.6] - 2025-04-09
+
+### Bug Fixes
+
+- 5d23abe 2025-04-09 fix: remove dependency on env variables (#418) by kevin@basistheory.com
+
 ## [1.11.5] - 2025-04-08
 
 ### Bug Fixes
