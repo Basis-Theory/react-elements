@@ -1,3 +1,9 @@
+## [1.11.7] - 2025-04-16
+
+### Bug Fixes
+
+- 0d471cd 2025-04-16 fix: add cardDetails to enrichments (#419) by kevin@basistheory.com
+
 ## [1.11.6] - 2025-04-09
 
 ### Bug Fixes
