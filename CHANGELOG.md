@@ -1,3 +1,9 @@
+## [1.11.8] - 2025-04-21
+
+### Bug Fixes
+
+- 1e22daa 2025-04-18 fix: remove process var from logging (#420) by kevin@basistheory.com
+
 ## [1.11.7] - 2025-04-16
 
 ### Bug Fixes
