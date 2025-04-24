@@ -1,3 +1,9 @@
+## [1.12.0] - 2025-04-24
+
+### Features
+
+- 1e166f1 2025-04-23 feat(CardElement): add stack layout for mobile views (#421) by kevin@basistheory.com
+
 ## [1.11.8] - 2025-04-21
 
 ### Bug Fixes
