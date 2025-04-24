@@ -1,3 +1,9 @@
+## [1.12.1] - 2025-04-24
+
+### Bug Fixes
+
+- 7e60786 2025-04-24 fix: patch BTJS/axios (#422) by kevin@basistheory.com
+
 ## [1.12.0] - 2025-04-24
 
 ### Features
