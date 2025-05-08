@@ -1,3 +1,9 @@
+## [1.12.2] - 2025-05-08
+
+### Bug Fixes
+
+- ea9a43c 2025-05-08 fix: remove false positive valueResolutionFailure (#424) by kevin@basistheory.com
+
 ## [1.12.1] - 2025-04-24
 
 ### Bug Fixes
