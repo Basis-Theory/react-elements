@@ -1,3 +1,10 @@
+## [1.13.0] - 2025-05-13
+
+### Features
+
+- 9e76de8 2025-05-13 feat: add validate to text element (#425) by kevin@basistheory.com
+- 57126ea 2025-05-08 feat: add manual validation for split card elements (#423) by kevin@basistheory.com
+
 ## [1.12.2] - 2025-05-08
 
 ### Bug Fixes

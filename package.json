@@ -1,6 +1,6 @@
 {
   "name": "@basis-theory/react-elements",
-  "version": "1.12.2",
+  "version": "1.13.0",
   "repository": "https://github.com/basis-theory/react-elements",
   "license": "Apache-2.0",
   "author": {
@@ -55,7 +55,7 @@
     }
   ],
   "dependencies": {
-    "@basis-theory/web-elements": "1.12.2"
+    "@basis-theory/web-elements": "1.13.0"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
