@@ -1,3 +1,10 @@
+## [1.13.1] - 2025-05-27
+
+### Bug Fixes
+
+- 99b9550 2025-05-26 fix: surface validate in all elements (#427) by kevin@basistheory.com
+- 2d77b78 2025-05-26 fix: re-export card types (#426) by kevin@basistheory.com
+
 ## [1.13.0] - 2025-05-13
 
 ### Features
