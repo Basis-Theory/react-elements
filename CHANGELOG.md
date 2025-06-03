@@ -1,3 +1,15 @@
+## [1.14.0] - 2025-06-03
+
+### Features
+
+- b3f5c0c 2025-06-03 feat: add custom iframe title (#431) by kevin@basistheory.com
+- f458627 2025-05-29 feat: detect when network issues prevent elements from loading (#429) by kevin@basistheory.com
+- 7c49687 2025-05-29 feat(card element): add support for autocomplete (#428) by kevin@basistheory.com
+
+### Bug Fixes
+
+- 0fa1fc1 2025-05-30 fix: improve net check for mobile devices on slow networks (#430) by kevin@basistheory.com
+
 ## [1.13.1] - 2025-05-27
 
 ### Bug Fixes
