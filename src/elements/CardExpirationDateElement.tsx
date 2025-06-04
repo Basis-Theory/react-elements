@@ -30,6 +30,7 @@ interface CardExpirationDateElementProps {
   placeholder?: string;
   readOnly?: boolean;
   style?: ElementStyle;
+  title?: string;
   validateOnChange?: boolean;
   value?: CardExpirationDateValue<'static'> | string;
   valueRef?: MutableRefObject<ICardExpirationDateElement | null>;
@@ -57,6 +58,7 @@ const CardExpirationDateElementC: FC<
   placeholder,
   readOnly,
   style,
+  title,
   validateOnChange,
   value,
   valueRef,
@@ -80,6 +82,7 @@ const CardExpirationDateElementC: FC<
       readOnly,
       style,
       targetId: id,
+      title,
       validateOnChange,
       value,
     },

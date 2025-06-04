@@ -34,6 +34,7 @@ interface CardNumberElementProps {
   readOnly?: boolean;
   skipLuhnValidation?: boolean;
   style?: ElementStyle;
+  title?: string;
   validateOnChange?: boolean;
   value?: string;
   valueRef?: MutableRefObject<ICardNumberElement | null>;
@@ -62,6 +63,7 @@ const CardNumberElementC: FC<
   readOnly,
   skipLuhnValidation,
   style,
+  title,
   validateOnChange,
   value,
   valueRef,
@@ -90,6 +92,7 @@ const CardNumberElementC: FC<
       skipLuhnValidation,
       style,
       targetId: id,
+      title,
       validateOnChange,
       value,
     },

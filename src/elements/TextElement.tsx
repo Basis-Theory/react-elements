@@ -27,6 +27,7 @@ interface BaseTextElementProps {
   placeholder?: string;
   readOnly?: boolean;
   style?: ElementStyle;
+  title?: string;
   transform?: RegExp | [RegExp, string?];
   validateOnChange?: boolean;
   validation?: RegExp;
@@ -67,6 +68,7 @@ const TextElementC: FC<
   placeholder,
   readOnly,
   style,
+  title,
   transform,
   validateOnChange,
   validation,
@@ -90,6 +92,7 @@ const TextElementC: FC<
       readOnly,
       style,
       targetId: id,
+      title,
       transform,
       validateOnChange,
       validation,

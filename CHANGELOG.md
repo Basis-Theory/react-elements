@@ -1,3 +1,9 @@
+## [1.14.1] - 2025-06-04
+
+### Bug Fixes
+
+- 34820f1 2025-06-03 fix: add iframe title type to react elements (#433) by kevin@basistheory.com
+
 ## [1.14.0] - 2025-06-03
 
 ### Features

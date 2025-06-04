@@ -33,6 +33,7 @@ interface CardElementProps {
   readOnly?: boolean;
   skipLuhnValidation?: boolean;
   style?: ElementStyle;
+  title?: string;
   validateOnChange?: boolean;
   value?: CardElementValue<'static'>;
 }
@@ -58,6 +59,7 @@ const CardElementC: FC<
   readOnly,
   skipLuhnValidation,
   style,
+  title,
   validateOnChange,
   value,
 }) => {
@@ -77,6 +79,7 @@ const CardElementC: FC<
       readOnly,
       skipLuhnValidation,
       style,
+      title,
       validateOnChange,
       value,
     },

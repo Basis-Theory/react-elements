@@ -34,6 +34,7 @@ interface CardVerificationCodeElementProps {
   placeholder?: string;
   readOnly?: boolean;
   style?: ElementStyle;
+  title?: string;
   validateOnChange?: boolean;
   value?: string;
   valueRef?: MutableRefObject<ICardVerificationCodeElement | null>;
@@ -62,6 +63,7 @@ const CardVerificationCodeElementC: FC<
   placeholder,
   readOnly,
   style,
+  title,
   validateOnChange,
   value,
   valueRef,
@@ -86,6 +88,7 @@ const CardVerificationCodeElementC: FC<
       readOnly,
       style,
       targetId: id,
+      title,
       validateOnChange,
       value,
     },
