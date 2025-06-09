@@ -1,3 +1,9 @@
+## [1.15.0] - 2025-06-09
+
+### Features
+
+- 6569baf 2025-06-06 feat(eng-8603): export types from /common (#436) by 62716969+washluis-alencar@users.noreply.github.com
+
 ## [1.14.1] - 2025-06-04
 
 ### Bug Fixes
