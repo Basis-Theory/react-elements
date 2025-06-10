@@ -1,3 +1,10 @@
+## [1.16.0] - 2025-06-10
+
+### Features
+
+- c47500b 2025-06-10 feat(eng-8293): fix token encryption (#438) by 62716969+washluis-alencar@users.noreply.github.com
+- d44d028 2025-06-09 feat: add encrypt method (#435) by 62716969+washluis-alencar@users.noreply.github.com
+
 ## [1.15.0] - 2025-06-09
 
 ### Features
