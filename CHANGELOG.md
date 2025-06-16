@@ -1,3 +1,9 @@
+## [1.17.0] - 2025-06-16
+
+### Features
+
+- a09d6a9 2025-06-16 feat: add _debug to `BasisTheoryApiError` (#439) by kevin@basistheory.com
+
 ## [1.16.0] - 2025-06-10
 
 ### Features
