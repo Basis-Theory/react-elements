@@ -8,13 +8,13 @@ A React wrapper for [Basis Theory](https://basistheory.com/) JS SDK.
 
 ## Installation
 
-Using [Node Package Manager](https://docs.npmjs.com/)
+Using [Node Package Manager]([https://docs.npmjs.com/](https://www.npmjs.com/package/@basis-theory/react-elements))
 
 ```sh
 npm install --save @basis-theory/react-elements
 ```
 
-Using [Yarn](https://classic.yarnpkg.com/en/docs/)
+Using [Yarn]([https://classic.yarnpkg.com/en/docs/](https://classic.yarnpkg.com/en/package/@basis-theory/react-elements))
 
 ```sh
 yarn add @basis-theory/react-elements

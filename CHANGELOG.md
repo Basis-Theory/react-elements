@@ -1,3 +1,22 @@
+## [1.18.0] - 2025-06-23
+
+### Features
+
+- d24a772 2025-06-18 feat: add `_debug` to `tokens`, `tokenize` and `tokenIntents` (#443) by kevin@basistheory.com
+
+### Bug Fixes
+
+- 7c2594a 2025-06-19 fix: favicon not found and supress findDomNode error from styling library (#445) by kevin@basistheory.com
+- ae48d23 2025-06-16 chore: fix integration tests (#440) by kevin@basistheory.com
+- 0013377 2025-06-16 fix: improve build output (#434) by kevin@basistheory.com
+
+### Chores
+
+- 8825a3e 2025-06-23 chore: restore dev deploy action (#447) by kevin@basistheory.com
+- c5c38ad 2025-06-23 chore: reverts vite migration (#446) by kevin@basistheory.com
+- 5e1fc1d 2025-06-17 chore: make integration tests run (#442) by kevin@basistheory.com
+- 58ed8ea 2025-06-16 chore: update version import path (#441) by kevin@basistheory.com
+
 ## [1.17.0] - 2025-06-16
 
 ### Features
