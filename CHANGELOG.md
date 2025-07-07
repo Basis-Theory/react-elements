@@ -1,3 +1,14 @@
+## [1.19.0] - 2025-07-07
+
+### Features
+
+- 6a01b84 2025-07-03 feat: returning the token alias when encrypting multiple tokens (#451) by 62716969+washluis-alencar@users.noreply.github.com
+- 53553a2 2025-06-26 feat: allow encrypt token with plaintext by 62716969+washluis-alencar@users.noreply.github.com
+
+### Chores
+
+- 0f92346 2025-07-07 chore: allow devs to purge the dev env cache via workflow (#452) by mstrisoline@users.noreply.github.com
+
 ## [1.18.0] - 2025-06-23
 
 ### Features
