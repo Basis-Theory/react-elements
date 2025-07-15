@@ -1,3 +1,21 @@
+## [1.20.0] - 2025-07-15
+
+### Features
+
+- 4ac2b5e 2025-07-15 feat: add useUat flag (#461) by kevin@basistheory.com
+- b89d5d8 2025-07-08 feat: bundle optimizations (#449) by kevin@basistheory.com
+- 606efff 2025-07-07 feat: bundle optimization (#448) by kevin@basistheory.com
+
+### Bug Fixes
+
+- 2c8cc6c 2025-07-15 fix: port set from hosted (#462) by kevin@basistheory.com
+- 60b2dbd 2025-07-14 fix: remove resource hints from client (#460) by kevin@basistheory.com
+- 8ed50c3 2025-07-11 fix: `set` replacement edge cases (#459) by kevin@basistheory.com
+
+### Chores
+
+- a80b10e 2025-07-10 chore: remove btjs from client and messages (#454) by kevin@basistheory.com
+
 ## [1.19.0] - 2025-07-07
 
 ### Features

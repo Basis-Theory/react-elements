@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import type {
   BasisTheoryElements,
   ElementType,
 } from '@basis-theory/web-elements';
-import { renderHook, waitFor } from '@testing-library/react';
+import { renderHook, waitFor, act } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { expect } from '@jest/globals';
 import { Chance } from 'chance';
@@ -58,7 +58,7 @@ describe('useElement', () => {
     jest.clearAllMocks();
   });
 
-  test("shouldn't do anything while bt instance is not available", () => {
+  test("shouldn't do anything while bt instance is not available", async () => {
     const mockRef = { current: document.createElement('div') };
 
     jest.mocked(useBasisTheoryValue).mockReturnValue(undefined);
@@ -67,12 +67,14 @@ describe('useElement', () => {
       useElement(chance.string(), chance.pickone(['card', 'text']), mockRef, {})
     );
 
-    expect(bt.createElement).toHaveBeenCalledTimes(0);
-    expect(result.current).toBeUndefined();
+    // Wait for any async effects to complete
+    await waitFor(() => {
+      expect(bt.createElement).toHaveBeenCalledTimes(0);
+      expect(result.current).toBeUndefined();
+    });
   });
 
   test("shouldn't do anything while wrapper ref is not in the DOM", () => {
-    // eslint-disable-next-line unicorn/no-null
     const mockRef = { current: null };
 
     const { result } = renderHook(() =>
@@ -87,7 +89,6 @@ describe('useElement', () => {
     const id = chance.string();
     const type = chance.pickone<ElementType>(['card', 'text']);
     const mockRef = { current: document.createElement('div') };
-    // eslint-disable-next-line unicorn/no-null
     const testRef = { current: null };
     const { result } = renderHook(() =>
       useElement(id, type, mockRef, {}, undefined, testRef)
@@ -100,19 +101,21 @@ describe('useElement', () => {
     expect(result.current).toBeDefined();
   });
 
-  test('should forward object ref to element on creation', () => {
+  test('should forward object ref to element on creation', async () => {
     const id = chance.string();
     const type = chance.pickone<ElementType>(['card', 'text']);
     const wrapperRef = { current: document.createElement('div') };
 
-    // eslint-disable-next-line unicorn/no-null
     const objectRef = { current: null };
     const { result } = renderHook(() =>
       useElement(id, type, wrapperRef, {}, undefined, objectRef)
     );
 
-    expect(result.current).toBeDefined();
-    expect(objectRef.current).toBe(result.current);
+    // Wait for async effects to complete
+    await waitFor(() => {
+      expect(result.current).toBeDefined();
+      expect(objectRef.current).toBe(result.current);
+    });
   });
 
   test('should forward function ref to element on creation', () => {
@@ -120,7 +123,6 @@ describe('useElement', () => {
     const type = chance.pickone<ElementType>(['card', 'text']);
     const wrapperRef = { current: document.createElement('div') };
 
-    // eslint-disable-next-line unicorn/no-null
     let createdElement = null;
     const functionRef = (element: any): void => {
       createdElement = element;
@@ -270,4 +272,3 @@ describe('useElement', () => {
     await waitFor(() => expect(asyncError).toStrictEqual(errorMessage));
   });
 });
-/* eslint-enable @typescript-eslint/explicit-function-return-type,@typescript-eslint/explicit-member-accessibility */
