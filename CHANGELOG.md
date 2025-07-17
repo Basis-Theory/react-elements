@@ -1,3 +1,15 @@
+## [1.21.0] - 2025-07-17
+
+### Features
+
+- e66f088 2025-07-17 feat: make network check opt-in (#466) by kevin@basistheory.com
+- 502dfa2 2025-07-16 feat: add parallel r2 deploy (#465) by mstrisoline@users.noreply.github.com
+
+### Chores
+
+- 5f96c0e 2025-07-15 chore: updated tf (#464) by mstrisoline@users.noreply.github.com
+- a22cbd3 2025-07-15 chore: init tf r2 (#463) by mstrisoline@users.noreply.github.com
+
 ## [1.20.0] - 2025-07-15
 
 ### Features
