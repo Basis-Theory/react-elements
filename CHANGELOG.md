@@ -1,3 +1,22 @@
+## [1.22.0] - 2025-07-18
+
+### Features
+
+- 0b69d0e 2025-07-18 feat: add uat deployment (#472) by mstrisoline@users.noreply.github.com
+
+### Bug Fixes
+
+- c96c83f 2025-07-18 chore: fix uat tf action (#473) by mstrisoline@users.noreply.github.com
+
+### Chores
+
+- 623272f 2025-07-18 chore: install rclone action (#475) by mstrisoline@users.noreply.github.com
+- 73118ce 2025-07-18 chore: ensure s3 elements deploy before r2 and tf (#474) by mstrisoline@users.noreply.github.com
+- ecfa61a 2025-07-17 chore: remove tfstate from deploy to cdn script (#471) by kevin@basistheory.com
+- 4537f72 2025-07-17 chore: gracefully handle publishing to existing version (#470) by kevin@basistheory.com
+- 6e95217 2025-07-17 chore: update generate-changelog-and-update-package-version.sh (#469) by kevin@basistheory.com
+- d729b30 2025-07-17 chore: set up prod deploy, cleanup workflows (#468) by mstrisoline@users.noreply.github.com
+
 ## [1.21.0] - 2025-07-17
 
 ### Features
