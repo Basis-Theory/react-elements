@@ -1,3 +1,9 @@
+## [1.22.1] - 2025-07-29
+
+### Bug Fixes
+
+- a229582 2025-07-22 fix: do not snakeCase/camelCase tokenize (#477) by kevin@basistheory.com
+
 ## [1.22.0] - 2025-07-18
 
 ### Features
