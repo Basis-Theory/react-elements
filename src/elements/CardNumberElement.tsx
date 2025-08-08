@@ -17,6 +17,7 @@ import { useListener } from './useListener';
 interface CardNumberElementProps {
   'aria-label'?: string;
   autoComplete?: CreateCardNumberElementOptions['autoComplete'];
+  binLookup?: boolean;
   bt?: BasisTheoryElements;
   cardTypes?: CreditCardType[];
   copyIconStyles?: CopyIconStyles;
@@ -45,6 +46,7 @@ const CardNumberElementC: FC<
 > = ({
   'aria-label': ariaLabel,
   autoComplete,
+  binLookup,
   bt,
   cardTypes,
   copyIconStyles,
@@ -81,6 +83,7 @@ const CardNumberElementC: FC<
     {
       'aria-label': ariaLabel,
       autoComplete,
+      binLookup,
       cardTypes,
       copyIconStyles,
       disabled,

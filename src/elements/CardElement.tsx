@@ -17,6 +17,7 @@ import { useListener } from './useListener';
 
 interface CardElementProps {
   autoComplete?: CreateCardElementOptions['autoComplete'];
+  binLookup?: boolean;
   bt?: BasisTheoryElements;
   cardTypes?: CreditCardType[];
   copyIconStyles?: CopyIconStyles;
@@ -42,6 +43,7 @@ const CardElementC: FC<
   CardElementProps & { elementRef?: ForwardedRef<ICardElement> }
 > = ({
   autoComplete,
+  binLookup,
   bt,
   cardTypes,
   copyIconStyles,
@@ -74,6 +76,7 @@ const CardElementC: FC<
       copyIconStyles,
       disabled,
       enableCopy,
+      binLookup,
       inputMode,
       placeholder,
       readOnly,

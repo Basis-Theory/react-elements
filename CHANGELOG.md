@@ -1,3 +1,20 @@
+## [1.23.0] - 2025-08-07
+
+### Features
+
+- fa3d978 2025-08-07 feat: setup new s3 deploys (#486) by mstrisoline@users.noreply.github.com
+- 2e2f754 2025-08-07 feat: add ability to do bin lookups for cards for web elements (#484) by ddiestras@gmail.com
+
+### Bug Fixes
+
+- 1ee81e5 2025-07-30 test(tokens service): fix integration test (#482) by kevin@basistheory.com
+
+### Chores
+
+- 0f7c5f7 2025-08-07 chore: invalid param for new s3 bucket (#489) by mstrisoline@users.noreply.github.com
+- 754fb0a 2025-08-07 chore: mised dev actons permissoins for aws auth (#488) by mstrisoline@users.noreply.github.com
+- 2bc55dc 2025-08-06 chore: disable r2 dns setup (#485) by mstrisoline@users.noreply.github.com
+
 ## [1.22.2] - 2025-07-29
 
 ### Bug Fixes
