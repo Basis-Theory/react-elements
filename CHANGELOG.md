@@ -1,3 +1,9 @@
+## [1.23.1] - 2025-08-11
+
+### Bug Fixes
+
+- 9f8f58f 2025-08-11 fix: override chrome autofill styles (#487) by kevin@basistheory.com
+
 ## [1.23.0] - 2025-08-07
 
 ### Features
