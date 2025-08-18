@@ -1,3 +1,13 @@
+## [1.24.0] - 2025-08-18
+
+### Features
+
+- f26e0d3 2025-08-18 feat: add brand network selector to card element (#490) by ddiestras@gmail.com
+
+### Bug Fixes
+
+- 8ca03dd 2025-08-14 fix: abortSignal polyfill and card element autocomplete values (#491) by kevin@basistheory.com
+
 ## [1.23.1] - 2025-08-11
 
 ### Bug Fixes

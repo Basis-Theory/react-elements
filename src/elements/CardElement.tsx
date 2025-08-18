@@ -8,6 +8,7 @@ import type {
   CopyIconStyles,
   CreateCardElementOptions,
   CreditCardType,
+  CoBadgedSupport,
   ElementEventListener,
   ElementStyle,
   InputMode,
@@ -20,6 +21,7 @@ interface CardElementProps {
   binLookup?: boolean;
   bt?: BasisTheoryElements;
   cardTypes?: CreditCardType[];
+  coBadgedSupport?: CoBadgedSupport[];
   copyIconStyles?: CopyIconStyles;
   disabled?: boolean;
   enableCopy?: boolean;
@@ -46,6 +48,7 @@ const CardElementC: FC<
   binLookup,
   bt,
   cardTypes,
+  coBadgedSupport,
   copyIconStyles,
   disabled,
   elementRef,
@@ -77,6 +80,7 @@ const CardElementC: FC<
       disabled,
       enableCopy,
       binLookup,
+      coBadgedSupport,
       inputMode,
       placeholder,
       readOnly,
