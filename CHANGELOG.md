@@ -1,3 +1,9 @@
+## [1.24.1] - 2025-08-20
+
+### Bug Fixes
+
+- 0ed2574 2025-08-19 fix: card element selectedNetwork validation error (#494) by kevin@basistheory.com
+
 ## [1.24.0] - 2025-08-18
 
 ### Features
@@ -121,7 +127,7 @@
 
 ### Features
 
-- a09d6a9 2025-06-16 feat: add _debug to `BasisTheoryApiError` (#439) by kevin@basistheory.com
+- a09d6a9 2025-06-16 feat: add \_debug to `BasisTheoryApiError` (#439) by kevin@basistheory.com
 
 ## [1.16.0] - 2025-06-10
 
