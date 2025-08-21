@@ -1,3 +1,9 @@
+## [1.24.2] - 2025-08-21
+
+### Bug Fixes
+
+- dd34449 2025-08-21 fix: exclude additional information without a brand attribute (#507) by ddiestras@gmail.com
+
 ## [1.24.1] - 2025-08-20
 
 ### Bug Fixes
