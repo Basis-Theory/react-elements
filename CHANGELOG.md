@@ -1,3 +1,19 @@
+## [2.0.0] - 2025-09-08
+
+### Breaking Changes
+
+- eb651be 2025-08-29 feat!: remove material ui (#478) by kevin@basistheory.com
+
+### Features
+
+- 5f3b347 2025-09-03 feat: collect device info (#516) by kevin@basistheory.com
+- c7f606d 2025-09-01 feat: allow style customization of elements container (#518) by kevin@basistheory.com
+- 97264fd 2025-08-21 feat: remove axios and btjs (#495) by kevin@basistheory.com
+
+### Bug Fixes
+
+- 8dbb18a 2025-08-29 fix: make input field always transparent (#517) by kevin@basistheory.com
+
 ## [1.24.2] - 2025-08-21
 
 ### Bug Fixes
@@ -49,6 +65,12 @@
 
 - 528c197 2025-07-29 fix: release (#480) by kevin@basistheory.com
 - a9f3fae 2025-07-29 fix: revert latest (#479) by kevin@basistheory.com
+
+## [1.22.1] - 2025-07-29
+
+### Bug Fixes
+
+- a229582 2025-07-22 fix: do not snakeCase/camelCase tokenize (#477) by kevin@basistheory.com
 
 ## [1.22.0] - 2025-07-18
 

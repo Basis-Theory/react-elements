@@ -1,11 +1,13 @@
-import * as React from 'react';
-import type { BasisTheoryInitOptions } from '@basis-theory/basis-theory-js/types/sdk';
+import type {
+  BasisTheoryElements,
+  BasisTheoryInitOptions,
+} from '@basis-theory/web-elements';
+import * as webElements from '@basis-theory/web-elements';
 import { renderHook, waitFor } from '@testing-library/react';
 import { Chance } from 'chance';
+import * as React from 'react';
 import { useBasisTheory } from '../../src';
 import { BasisTheoryProvider } from '../../src/core/BasisTheoryProvider';
-import type { BasisTheoryElements } from '@basis-theory/web-elements';
-import * as webElements from '@basis-theory/web-elements';
 
 jest.mock('@basis-theory/web-elements', () => ({
   basistheory: jest.fn(),
