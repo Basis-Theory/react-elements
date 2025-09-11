@@ -1,3 +1,10 @@
+## [2.1.0] - 2025-09-11
+
+### Features
+
+- fdfaabf 2025-09-11 feat: adds copy button (#519) by brian.gonzalez@basistheory.com
+- 6503dd1 2025-09-08 feat: add support for domain whitelabeling (#510) by kevin@basistheory.com
+
 ## [2.0.0] - 2025-09-08
 
 ### Breaking Changes
