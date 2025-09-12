@@ -1,3 +1,9 @@
+## [2.2.0] - 2025-09-12
+
+### Features
+
+- 17f206f 2025-09-12 feat: add copy button to react elements (#521) by kevin@basistheory.com
+
 ## [2.1.0] - 2025-09-11
 
 ### Features

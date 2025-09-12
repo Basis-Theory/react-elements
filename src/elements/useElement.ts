@@ -1,3 +1,8 @@
+import type {
+  BaseElement,
+  BasisTheoryElements,
+  ElementType,
+} from '@basis-theory/web-elements';
 import React, {
   ForwardedRef,
   MutableRefObject,
@@ -5,11 +10,6 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import type {
-  BaseElement,
-  BasisTheoryElements,
-  ElementType,
-} from '@basis-theory/web-elements';
 import { useBasisTheoryValue } from './useBasisTheoryValue';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -59,7 +59,9 @@ const shallowDifference = <
 const useElement = <
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Element extends BaseElement<any, any>,
-  Options extends unknown
+  Options extends unknown,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  TargetElement extends BaseElement<any, any> = Element
 >(
   id: string,
   type: ElementType,
@@ -67,7 +69,7 @@ const useElement = <
   options: Options,
   btFromProps?: BasisTheoryElements,
   ref?: ForwardedRef<Element>,
-  targetValueRef?: MutableRefObject<Element | null>
+  targetValueRef?: MutableRefObject<TargetElement | null>
 ): Element | undefined => {
   const bt = useBasisTheoryValue(btFromProps);
   const [lastOptions, setLastOptions] = useState<Options>();
