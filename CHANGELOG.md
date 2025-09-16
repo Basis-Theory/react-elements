@@ -1,3 +1,9 @@
+## [2.2.1] - 2025-09-16
+
+### Bug Fixes
+
+- f548429 2025-09-16 fix(font-manager): define safe font sources before loading (#522) by kevin@basistheory.com
+
 ## [2.2.0] - 2025-09-12
 
 ### Features
