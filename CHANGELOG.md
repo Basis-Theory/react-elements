@@ -1,3 +1,9 @@
+## [2.2.2] - 2025-09-17
+
+### Bug Fixes
+
+- 0a6381b 2025-09-17 fix: telemetry env var names (#524) by kevin@basistheory.com
+
 ## [2.2.1] - 2025-09-16
 
 ### Bug Fixes
