@@ -1,3 +1,9 @@
+## [2.2.3] - 2025-10-01
+
+### Bug Fixes
+
+- 9944676 2025-10-01 fix: focus service and style (#528) by kevin@basistheory.com
+
 ## [2.2.2] - 2025-09-17
 
 ### Bug Fixes
