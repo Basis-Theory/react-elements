@@ -1,3 +1,9 @@
+## [2.2.4] - 2025-10-02
+
+### Bug Fixes
+
+- d1a337b 2025-10-02 fix: network error message grammar (#531) by djejaquino@users.noreply.github.com
+
 ## [2.2.3] - 2025-10-01
 
 ### Bug Fixes
