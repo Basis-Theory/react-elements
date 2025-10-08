@@ -1,3 +1,10 @@
+## [2.3.0] - 2025-10-08
+
+### Features
+
+- 7848672 2025-10-08 feat: add co-badged support to the CardNumberElement (#532) by ddiestras@gmail.com
+- 52e16a7 2025-10-03 feat: send device info in requests (#526) by ddiestras@gmail.com
+
 ## [2.2.4] - 2025-10-02
 
 ### Bug Fixes
