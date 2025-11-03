@@ -1,3 +1,15 @@
+## [2.5.0] - 2025-11-03
+
+### Features
+
+- 6aa85b9 2025-10-30 feat: improving error handling for token encryption (#538) by 62716969+washluis-alencar@users.noreply.github.com
+
+### Bug Fixes
+
+- 693f6e0 2025-11-03 fix: improves npm release error handling (#540) by kevin@basistheory.com
+- 8e67f12 2025-10-30 fix: change publish command from yarn to npm (#539) by kevin@basistheory.com
+- 0af4d95 2025-10-29 fix: adds trusted publishing (#537) by kevin@basistheory.com
+
 ## [2.3.0] - 2025-10-08
 
 ### Features
