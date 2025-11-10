@@ -22,6 +22,7 @@ interface CardExpirationDateElementProps {
   enableCopy?: boolean;
   id: string;
   inputMode?: `${InputMode}`;
+  maxElapsedExpirationYear?: number;
   onBlur?: ElementEventListener<CardExpirationDateElementEvents, 'blur'>;
   onChange?: ElementEventListener<CardExpirationDateElementEvents, 'change'>;
   onFocus?: ElementEventListener<CardExpirationDateElementEvents, 'focus'>;
@@ -50,6 +51,7 @@ const CardExpirationDateElementC: FC<
   enableCopy,
   id,
   inputMode,
+  maxElapsedExpirationYear,
   onBlur,
   onChange,
   onFocus,
@@ -78,6 +80,7 @@ const CardExpirationDateElementC: FC<
       disabled,
       enableCopy,
       inputMode,
+      maxElapsedExpirationYear,
       placeholder,
       readOnly,
       style,

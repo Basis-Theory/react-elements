@@ -31,6 +31,7 @@ describe('CardExpirationDateElement', () => {
   let enableCopy: boolean;
   let id: string;
   let inputMode: `${InputMode}`;
+  let maxElapsedExpirationYear: number;
   let onBlur: jest.Mock;
   let onChange: jest.Mock;
   let onFocus: jest.Mock;
@@ -71,6 +72,7 @@ describe('CardExpirationDateElement', () => {
     validateOnChange = chance.bool();
     enableCopy = chance.bool();
     inputMode = 'numeric';
+    maxElapsedExpirationYear = chance.integer({ min: 1, max: 50 });
     onReady = jest.fn();
     onChange = jest.fn();
     onFocus = jest.fn();
@@ -138,5 +140,29 @@ describe('CardExpirationDateElement', () => {
     expect(useListener).toHaveBeenCalledWith('focus', element, onFocus);
     expect(useListener).toHaveBeenCalledWith('blur', element, onBlur);
     expect(useListener).toHaveBeenCalledWith('keydown', element, onKeyDown);
+  });
+
+  test('should pass maxElapsedExpirationYear prop to useElement', () => {
+    render(
+      <CardExpirationDateElement
+        id={id}
+        maxElapsedExpirationYear={maxElapsedExpirationYear}
+        onReady={onReady}
+      />
+    );
+
+    expect(useElement).toHaveBeenCalledWith(
+      id,
+      'cardExpirationDate',
+      { current: wrapperDiv },
+      expect.objectContaining({
+        targetId: id,
+        maxElapsedExpirationYear,
+      }),
+      undefined,
+      // eslint-disable-next-line unicorn/no-null
+      null,
+      undefined
+    );
   });
 });

@@ -27,6 +27,7 @@ interface CardElementProps {
   enableCopy?: boolean;
   id: string;
   inputMode?: `${InputMode}`;
+  maxElapsedExpirationYear?: number;
   onBlur?: ElementEventListener<CardElementEvents, 'blur'>;
   onChange?: ElementEventListener<CardElementEvents, 'change'>;
   onFocus?: ElementEventListener<CardElementEvents, 'focus'>;
@@ -55,6 +56,7 @@ const CardElementC: FC<
   enableCopy,
   id,
   inputMode,
+  maxElapsedExpirationYear,
   onBlur,
   onChange,
   onFocus,
@@ -82,6 +84,7 @@ const CardElementC: FC<
       binLookup,
       coBadgedSupport,
       inputMode,
+      maxElapsedExpirationYear,
       placeholder,
       readOnly,
       skipLuhnValidation,

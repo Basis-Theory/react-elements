@@ -1,3 +1,9 @@
+## [2.6.0] - 2025-11-10
+
+### Features
+
+- c43daaa 2025-11-07 feat: adding option to configure max elapsed for card expiration date (#543) by 62716969+washluis-alencar@users.noreply.github.com
+
 ## [2.5.0] - 2025-11-03
 
 ### Features
