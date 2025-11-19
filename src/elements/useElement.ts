@@ -65,7 +65,7 @@ const useElement = <
 >(
   id: string,
   type: ElementType,
-  wrapperRef: React.RefObject<HTMLDivElement>,
+  wrapperRef: React.RefObject<HTMLDivElement | null>,
   options: Options,
   btFromProps?: BasisTheoryElements,
   ref?: ForwardedRef<Element>,

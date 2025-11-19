@@ -1,3 +1,9 @@
+## [2.7.0] - 2025-11-18
+
+### Features
+
+- 8ddcee8 2025-11-17 feat: upgrade react elements to react 19 and fix test errors (#544) by ddiestras@gmail.com
+
 ## [2.6.0] - 2025-11-10
 
 ### Features

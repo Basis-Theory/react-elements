@@ -4,7 +4,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "declaration": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "outDir": "dist/types",
     "target": "ESNext",
     "types": ["node", "jest"],

@@ -25,15 +25,28 @@ describe('useElement', () => {
     return <>{children}</>;
   };
 
-  class ErrorBoundary extends React.Component<{
-    children: React.ReactElement;
-  }> {
+  class ErrorBoundary extends React.Component<
+    {
+      children: React.ReactElement;
+    },
+    { hasError: boolean }
+  > {
+    constructor(props: { children: React.ReactElement }) {
+      super(props);
+      this.state = { hasError: false };
+    }
+
+    static getDerivedStateFromError(error: unknown) {
+      asyncError = error;
+      return { hasError: true };
+    }
+
     componentDidCatch(error: unknown) {
       asyncError = error;
     }
 
     render() {
-      return !asyncError && this.props.children;
+      return !this.state.hasError && this.props.children;
     }
   }
 
