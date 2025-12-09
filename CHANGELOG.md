@@ -1,3 +1,10 @@
+## [2.8.0] - 2025-12-09
+
+### Features
+
+- 354ef03 2025-12-05 feat: update useUat flag to environment (#545) by jolesa97@gmail.com
+- 09fb944 2025-12-04 feat: filter bin info based on user input (#546) by ddiestras@gmail.com
+
 ## [2.7.0] - 2025-11-18
 
 ### Features
