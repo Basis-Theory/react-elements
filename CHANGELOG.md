@@ -1,3 +1,9 @@
+## [2.8.1] - 2025-12-16
+
+### Bug Fixes
+
+- d5731d2 2025-12-15 fix: resolve pass of additional errors and include acceptance tests (#549) by ddiestras@gmail.com
+
 ## [2.8.0] - 2025-12-09
 
 ### Features
