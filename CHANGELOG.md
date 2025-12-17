@@ -1,3 +1,9 @@
+## [2.8.2] - 2025-12-17
+
+### Bug Fixes
+
+- 5c9235a 2025-12-17 fix: allow trigger validation when setting values from token (#548) by ddiestras@gmail.com
+
 ## [2.8.1] - 2025-12-16
 
 ### Bug Fixes
