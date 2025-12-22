@@ -1,3 +1,9 @@
+## [2.8.3] - 2025-12-22
+
+### Bug Fixes
+
+- 640d134 2025-12-22 fix: add correct function signature (#550) by ddiestras@gmail.com
+
 ## [2.8.2] - 2025-12-17
 
 ### Bug Fixes
