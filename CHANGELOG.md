@@ -1,3 +1,10 @@
+## [2.8.4] - 2026-01-16
+
+### Bug Fixes
+
+- b108b33 2026-01-16 fix: fix integration tests for UAT environment (#554) by drew@basistheory.com
+- 14f4015 2026-01-16 fix: updating UAT url to api.test.baisistheory.com (#552) by drew@basistheory.com
+
 ## [2.8.3] - 2025-12-22
 
 ### Bug Fixes
