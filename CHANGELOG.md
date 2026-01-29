@@ -1,3 +1,10 @@
+## [2.9.0] - 2026-01-29
+
+### Features
+
+- 06f48da 2026-01-28 feat: add onCopy event callback support for CopyButtonElement, CardElement, CardNumberElement, CardExpirationDateElement, CardVerificationCodeElement (#553) by angel@basistheory.com
+- c747358 2026-01-27 feat: remove uat (#555) by jolesa97@gmail.com
+
 ## [2.8.4] - 2026-01-16
 
 ### Bug Fixes

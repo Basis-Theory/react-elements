@@ -25,6 +25,7 @@ interface CardVerificationCodeElementProps {
   inputMode?: `${InputMode}`;
   onBlur?: ElementEventListener<CardVerificationCodeElementEvents, 'blur'>;
   onChange?: ElementEventListener<CardVerificationCodeElementEvents, 'change'>;
+  onCopy?: ElementEventListener<CardVerificationCodeElementEvents, 'copy'>;
   onFocus?: ElementEventListener<CardVerificationCodeElementEvents, 'focus'>;
   onKeyDown?: ElementEventListener<
     CardVerificationCodeElementEvents,
@@ -57,6 +58,7 @@ const CardVerificationCodeElementC: FC<
   inputMode,
   onBlur,
   onChange,
+  onCopy,
   onFocus,
   onKeyDown,
   onReady,
@@ -99,6 +101,7 @@ const CardVerificationCodeElementC: FC<
 
   useListener('ready', element, onReady);
   useListener('change', element, onChange);
+  useListener('copy', element, onCopy);
   useListener('focus', element, onFocus);
   useListener('blur', element, onBlur);
   useListener('keydown', element, onKeyDown);

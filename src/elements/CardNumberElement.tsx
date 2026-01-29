@@ -30,6 +30,7 @@ interface CardNumberElementProps {
   inputMode?: `${InputMode}`;
   onBlur?: ElementEventListener<CardNumberElementEvents, 'blur'>;
   onChange?: ElementEventListener<CardNumberElementEvents, 'change'>;
+  onCopy?: ElementEventListener<CardNumberElementEvents, 'copy'>;
   onFocus?: ElementEventListener<CardNumberElementEvents, 'focus'>;
   onKeyDown?: ElementEventListener<CardNumberElementEvents, 'keydown'>;
   onReady?: ElementEventListener<CardNumberElementEvents, 'ready'>;
@@ -61,6 +62,7 @@ const CardNumberElementC: FC<
   inputMode,
   onBlur,
   onChange,
+  onCopy,
   onFocus,
   onKeyDown,
   onReady,
@@ -110,6 +112,7 @@ const CardNumberElementC: FC<
 
   useListener('ready', element, onReady);
   useListener('change', element, onChange);
+  useListener('copy', element, onCopy);
   useListener('focus', element, onFocus);
   useListener('blur', element, onBlur);
   useListener('keydown', element, onKeyDown);

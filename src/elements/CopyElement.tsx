@@ -17,6 +17,7 @@ interface CopyButtonElementProps {
   bt?: BasisTheoryElements;
   id: string;
   onClick?: ElementEventListener<CopyButtonElementEvents, 'click'>;
+  onCopy?: ElementEventListener<CopyButtonElementEvents, 'copy'>;
   text?: string;
   style?: CopyButtonElementStyle;
   valueRef?: MutableRefObject<
@@ -29,7 +30,7 @@ interface CopyButtonElementProps {
 
 const CopyButtonElementC: FC<
   CopyButtonElementProps & { elementRef?: ForwardedRef<ICopyButtonElement> }
-> = ({ bt, elementRef, id, text, onClick, style, valueRef }) => {
+> = ({ bt, elementRef, id, text, onClick, onCopy, style, valueRef }) => {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const element = useElement<
     ICopyButtonElement,
@@ -59,6 +60,7 @@ const CopyButtonElementC: FC<
   );
 
   useListener('click', element, onClick);
+  useListener('copy', element, onCopy);
 
   return <div id={id} ref={wrapperRef} />;
 };

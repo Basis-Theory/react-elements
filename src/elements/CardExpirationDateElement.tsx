@@ -25,6 +25,7 @@ interface CardExpirationDateElementProps {
   maxElapsedExpirationYear?: number;
   onBlur?: ElementEventListener<CardExpirationDateElementEvents, 'blur'>;
   onChange?: ElementEventListener<CardExpirationDateElementEvents, 'change'>;
+  onCopy?: ElementEventListener<CardExpirationDateElementEvents, 'copy'>;
   onFocus?: ElementEventListener<CardExpirationDateElementEvents, 'focus'>;
   onKeyDown?: ElementEventListener<CardExpirationDateElementEvents, 'keydown'>;
   onReady?: ElementEventListener<CardExpirationDateElementEvents, 'ready'>;
@@ -54,6 +55,7 @@ const CardExpirationDateElementC: FC<
   maxElapsedExpirationYear,
   onBlur,
   onChange,
+  onCopy,
   onFocus,
   onKeyDown,
   onReady,
@@ -96,6 +98,7 @@ const CardExpirationDateElementC: FC<
 
   useListener('ready', element, onReady);
   useListener('change', element, onChange);
+  useListener('copy', element, onCopy);
   useListener('focus', element, onFocus);
   useListener('blur', element, onBlur);
   useListener('keydown', element, onKeyDown);

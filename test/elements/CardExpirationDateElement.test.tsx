@@ -34,6 +34,7 @@ describe('CardExpirationDateElement', () => {
   let maxElapsedExpirationYear: number;
   let onBlur: jest.Mock;
   let onChange: jest.Mock;
+  let onCopy: jest.Mock;
   let onFocus: jest.Mock;
   let onKeyDown: jest.Mock;
   let onReady: jest.Mock;
@@ -75,6 +76,7 @@ describe('CardExpirationDateElement', () => {
     maxElapsedExpirationYear = chance.integer({ min: 1, max: 50 });
     onReady = jest.fn();
     onChange = jest.fn();
+    onCopy = jest.fn();
     onFocus = jest.fn();
     onBlur = jest.fn();
     onKeyDown = jest.fn();
@@ -98,6 +100,7 @@ describe('CardExpirationDateElement', () => {
         inputMode={inputMode}
         onBlur={onBlur}
         onChange={onChange}
+        onCopy={onCopy}
         onFocus={onFocus}
         onKeyDown={onKeyDown}
         onReady={onReady}
@@ -137,6 +140,7 @@ describe('CardExpirationDateElement', () => {
     );
     expect(useListener).toHaveBeenCalledWith('ready', element, onReady);
     expect(useListener).toHaveBeenCalledWith('change', element, onChange);
+    expect(useListener).toHaveBeenCalledWith('copy', element, onCopy);
     expect(useListener).toHaveBeenCalledWith('focus', element, onFocus);
     expect(useListener).toHaveBeenCalledWith('blur', element, onBlur);
     expect(useListener).toHaveBeenCalledWith('keydown', element, onKeyDown);

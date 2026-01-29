@@ -35,6 +35,7 @@ describe('CardVerificationCodeElement', () => {
   let inputMode: `${InputMode}`;
   let onBlur: jest.Mock;
   let onChange: jest.Mock;
+  let onCopy: jest.Mock;
   let onFocus: jest.Mock;
   let onKeyDown: jest.Mock;
   let onReady: jest.Mock;
@@ -65,6 +66,7 @@ describe('CardVerificationCodeElement', () => {
     cardBrand = chance.pickone<Brand>([...CARD_BRANDS]);
     onReady = jest.fn();
     onChange = jest.fn();
+    onCopy = jest.fn();
     onFocus = jest.fn();
     onBlur = jest.fn();
     onKeyDown = jest.fn();
@@ -94,6 +96,7 @@ describe('CardVerificationCodeElement', () => {
         inputMode={inputMode}
         onBlur={onBlur}
         onChange={onChange}
+        onCopy={onCopy}
         onFocus={onFocus}
         onKeyDown={onKeyDown}
         onReady={onReady}
@@ -134,6 +137,7 @@ describe('CardVerificationCodeElement', () => {
     );
     expect(useListener).toHaveBeenCalledWith('ready', element, onReady);
     expect(useListener).toHaveBeenCalledWith('change', element, onChange);
+    expect(useListener).toHaveBeenCalledWith('copy', element, onCopy);
     expect(useListener).toHaveBeenCalledWith('focus', element, onFocus);
     expect(useListener).toHaveBeenCalledWith('blur', element, onBlur);
     expect(useListener).toHaveBeenCalledWith('keydown', element, onKeyDown);
