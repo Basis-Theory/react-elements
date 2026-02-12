@@ -1,3 +1,9 @@
+## [2.10.0] - 2026-02-12
+
+### Features
+
+- b52330a 2026-02-11 feat: await for data element to be fully mount (#559) by ddiestras@gmail.com
+
 ## [2.9.0] - 2026-01-29
 
 ### Features
