@@ -9,6 +9,7 @@ import type {
   CreateCardElementOptions,
   CreditCardType,
   CoBadgedSupport,
+  CardIconPosition,
   ElementEventListener,
   ElementStyle,
   InputMode,
@@ -27,6 +28,7 @@ interface CardElementProps {
   enableCopy?: boolean;
   id: string;
   inputMode?: `${InputMode}`;
+  iconPosition?: CardIconPosition;
   maxElapsedExpirationYear?: number;
   onBlur?: ElementEventListener<CardElementEvents, 'blur'>;
   onChange?: ElementEventListener<CardElementEvents, 'change'>;
@@ -57,6 +59,7 @@ const CardElementC: FC<
   enableCopy,
   id,
   inputMode,
+  iconPosition,
   maxElapsedExpirationYear,
   onBlur,
   onChange,
@@ -86,6 +89,7 @@ const CardElementC: FC<
       binLookup,
       coBadgedSupport,
       inputMode,
+      iconPosition,
       maxElapsedExpirationYear,
       placeholder,
       readOnly,

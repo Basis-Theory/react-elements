@@ -1,3 +1,9 @@
+## [2.11.1] - 2026-02-27
+
+### Bug Fixes
+
+- 9b2f6fa 2026-02-27 fix: allow disabling or configuring card icon in CardElement React (#583) by ddiestras@gmail.com
+
 ## [2.11.0] - 2026-02-27
 
 ### Features
