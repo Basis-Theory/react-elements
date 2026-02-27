@@ -1,3 +1,9 @@
+## [2.11.0] - 2026-02-27
+
+### Features
+
+- 2833924 2026-02-27 feat: allow  disabling or configuring card icon in CardElement (#581) by ddiestras@gmail.com
+
 ## [2.10.0] - 2026-02-12
 
 ### Features
