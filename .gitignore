@@ -10,3 +10,6 @@ cypress/downloads
 .idea
 .env
 .vscode/
+
+# IDE
+.cursor
