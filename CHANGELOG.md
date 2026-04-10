@@ -1,3 +1,11 @@
+## [2.11.2] - 2026-04-10
+
+### Bug Fixes
+
+- 52e481c 2026-04-10 fix: normalize 4-digit year autofill in CardExpirationDate (#618) by kevin@basistheory.com
+- 8e298fc 2026-04-07 fix: preserve full card number on paste/autofill for >16 digit cards (#610) by kevin@basistheory.com
+- 05a1c72 2026-03-23 fix(ENG-10368): remove unconditional console statements and enforce no-console lint rule (#597) by 257857930+ducktape-agents[bot]@users.noreply.github.com
+
 ## [2.11.1] - 2026-02-27
 
 ### Bug Fixes
