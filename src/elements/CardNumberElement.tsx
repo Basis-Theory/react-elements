@@ -1,6 +1,7 @@
 import React, { FC, useRef, ForwardedRef, MutableRefObject } from 'react';
 import type {
   BasisTheoryElements,
+  Brand,
   ICardNumberElement,
   CardNumberElementEvents,
   CopyIconStyles,
@@ -35,6 +36,7 @@ interface CardNumberElementProps {
   onKeyDown?: ElementEventListener<CardNumberElementEvents, 'keydown'>;
   onReady?: ElementEventListener<CardNumberElementEvents, 'ready'>;
   placeholder?: string;
+  preSelectedNetworks?: Brand[];
   readOnly?: boolean;
   skipLuhnValidation?: boolean;
   style?: ElementStyle;
@@ -67,6 +69,7 @@ const CardNumberElementC: FC<
   onKeyDown,
   onReady,
   placeholder,
+  preSelectedNetworks,
   readOnly,
   skipLuhnValidation,
   style,
@@ -97,6 +100,7 @@ const CardNumberElementC: FC<
       iconPosition,
       inputMode,
       placeholder,
+      preSelectedNetworks,
       readOnly,
       skipLuhnValidation,
       style,

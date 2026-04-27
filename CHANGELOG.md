@@ -1,3 +1,9 @@
+## [2.12.0] - 2026-04-27
+
+### Features
+
+- 112953a 2026-04-21 feat: add Bancontact and Dankort to cobadge and preSelectedNetworks option (#624) by ddiestras@gmail.com
+
 ## [2.11.2] - 2026-04-10
 
 ### Bug Fixes

@@ -1,6 +1,7 @@
 import React, { FC, useRef, ForwardedRef } from 'react';
 import type {
   BasisTheoryElements,
+  Brand,
   ICardElement,
   CardElementEvents,
   CardElementPlaceholder,
@@ -30,6 +31,7 @@ interface CardElementProps {
   inputMode?: `${InputMode}`;
   iconPosition?: CardIconPosition;
   maxElapsedExpirationYear?: number;
+  preSelectedNetworks?: Brand[];
   onBlur?: ElementEventListener<CardElementEvents, 'blur'>;
   onChange?: ElementEventListener<CardElementEvents, 'change'>;
   onCopy?: ElementEventListener<CardElementEvents, 'copy'>;
@@ -61,6 +63,7 @@ const CardElementC: FC<
   inputMode,
   iconPosition,
   maxElapsedExpirationYear,
+  preSelectedNetworks,
   onBlur,
   onChange,
   onCopy,
@@ -91,6 +94,7 @@ const CardElementC: FC<
       inputMode,
       iconPosition,
       maxElapsedExpirationYear,
+      preSelectedNetworks,
       placeholder,
       readOnly,
       skipLuhnValidation,
