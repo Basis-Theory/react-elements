@@ -1,3 +1,9 @@
+## [2.12.1] - 2026-04-28
+
+### Bug Fixes
+
+- 8b43d13 2026-04-28 fix: restore CardElement auto-focus to expiration on valid card length (#630) by kevin@basistheory.com
+
 ## [2.12.0] - 2026-04-27
 
 ### Features
