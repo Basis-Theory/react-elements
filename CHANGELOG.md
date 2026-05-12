@@ -1,3 +1,9 @@
+## [2.12.2] - 2026-05-12
+
+### Bug Fixes
+
+- 61a884b 2026-05-12 fix: replace iframe index for iframe name (#631) by ddiestras@gmail.com
+
 ## [2.12.1] - 2026-04-28
 
 ### Bug Fixes
