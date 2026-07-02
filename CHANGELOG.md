@@ -1,3 +1,13 @@
+## [2.13.0] - 2026-07-02
+
+### Features
+
+- b9e368a 2026-06-30 feat(ENG-11437): add triggerable prod -> UAT Elements S3 sync (#672) by kevin@basistheory.com
+
+### Bug Fixes
+
+- 02899f9 2026-06-05 fix(ENG-11177): replace terraform-admin role chain with scoped IAM roles (#649) by mstrisoline@users.noreply.github.com
+
 ## [2.12.2] - 2026-05-12
 
 ### Bug Fixes
