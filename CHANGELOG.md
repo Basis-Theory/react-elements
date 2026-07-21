@@ -1,3 +1,16 @@
+## [2.14.0] - 2026-07-21
+
+### Features
+
+- 5e1c4eb 2026-07-13 feat(ENG-11530): trigger system-tests after dev and prod deploys (#680) by drew@basistheory.com
+
+### Bug Fixes
+
+- 25cd5d6 2026-07-20 fix(ENG-11357): Allow test enviroment on whitelabel domain elements (#681) by ddiestras@gmail.com
+- ce70aab 2026-07-15 fix(ENG-11530): pass artifact version to system tests (#683) by drew@basistheory.com
+- 2c63676 2026-07-15 fix(ENG-11595): pin npm to 11.18.0 for OIDC trusted publishing (#685) by mstrisoline@users.noreply.github.com
+- 23b9397 2026-07-08 fix(ENG-11520): replace semantic-release PAT with multi-repo bt_semantic_release app token (#679) by mstrisoline@users.noreply.github.com
+
 ## [2.13.0] - 2026-07-02
 
 ### Features
