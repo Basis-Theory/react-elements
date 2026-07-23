@@ -75,7 +75,7 @@ describe('useElement', () => {
     expect(result.current).toBeUndefined();
   });
 
-  test('should create and mount', () => {
+  test('should create and mount', async () => {
     const id = chance.string();
     const type = chance.pickone<ElementType>(['card', 'text']);
     const mockRef = { current: document.createElement('div') };
@@ -87,7 +87,7 @@ describe('useElement', () => {
 
     expect(bt.createElement).toHaveBeenCalledTimes(1);
     expect(bt.createElement).toHaveBeenCalledWith(type, {});
-    expect(mount).toHaveBeenCalledTimes(1);
+    await waitFor(() => expect(mount).toHaveBeenCalledTimes(1));
     expect(mount).toHaveBeenCalledWith(`#${id}`);
     expect(result.current).toBeDefined();
   });

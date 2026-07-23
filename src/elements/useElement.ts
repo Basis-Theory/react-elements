@@ -76,12 +76,16 @@ const useElement = <
   const elementRef = useRef<Element | null>(null);
 
   useEffect(() => {
+    let active = true;
+    let mountedElement: Element | undefined;
+
     if (bt && wrapperRef.current && !elementRef.current) {
       const newElement = bt.createElement(
         type as never,
         options as never
       ) as unknown as Element; // conversion to unknown necessary because of different value prop types
 
+      mountedElement = newElement;
       elementRef.current = newElement;
 
       if (typeof ref === 'function') {
@@ -94,11 +98,33 @@ const useElement = <
       }
 
       (async () => {
-        await newElement.mount(`#${id}`).catch((mountError) => {
-          setLastOptions(() => {
-            throw mountError;
-          });
-        });
+        // deferring the mount lets an immediate cleanup (eg Strict Mode's
+        // effect replay) cancel it before the iframe is ever created
+        await Promise.resolve();
+
+        if (!active) {
+          return;
+        }
+
+        try {
+          await newElement.mount(`#${id}`);
+        } catch (mountError) {
+          if (active) {
+            setLastOptions(() => {
+              throw mountError;
+            });
+          }
+
+          return;
+        }
+
+        if (!active) {
+          if (newElement.mounted) {
+            newElement.unmount();
+          }
+
+          return;
+        }
 
         if (elementHasSetValueRef(newElement) && targetValueRef?.current) {
           newElement.setValueRef(targetValueRef.current);
@@ -107,6 +133,34 @@ const useElement = <
 
       setLastOptions(options);
     }
+
+    return () => {
+      active = false;
+
+      if (!mountedElement) {
+        return;
+      }
+
+      // unmount() throws if the element is not mounted, so gate on the
+      // public mounted flag; an in-flight mount that settles later is
+      // cleaned up by the !active check above
+      if (mountedElement.mounted) {
+        mountedElement.unmount();
+      }
+
+      if (elementRef.current === mountedElement) {
+        elementRef.current = null;
+      }
+
+      if (typeof ref === 'function') {
+        ref(null);
+      }
+
+      if (ref && typeof ref === 'object') {
+        // eslint-disable-next-line no-param-reassign
+        ref.current = null;
+      }
+    };
 
     // the only two dependencies that we need to watch for
     // are bt and wrapperRef. Anything else changing should not
