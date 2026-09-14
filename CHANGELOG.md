@@ -1,3 +1,18 @@
+## [2.16.0] - 2026-09-14
+
+### Features
+
+- 9090d7e 2026-09-10 feat(ENG-12184): support expiration date display spacing (#727) by kevin.rojas@basistheory.com
+
+### Bug Fixes
+
+- 79bce61 2026-08-20 fix(ENG-12181): publish production packages under legacy tag (#719) by 257857930+ducktape-agents[bot]@users.noreply.github.com
+- 28f8e37 2026-08-18 fix(ENG-12114): derive master's tag and notes baseline from its own line (#718) by 257857930+ducktape-agents[bot]@users.noreply.github.com
+
+## [2.15.0] - 2026-07-22
+
+Re-release of 2.14.0; no functional changes (published by a release-pipeline retry).
+
 ## [2.14.0] - 2026-07-21
 
 ### Features

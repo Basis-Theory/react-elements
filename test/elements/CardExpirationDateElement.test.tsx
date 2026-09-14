@@ -27,6 +27,7 @@ describe('CardExpirationDateElement', () => {
   let autoComplete: 'on' | 'off';
   let copyIconStyles: CopyIconStyles;
   let disabled: boolean;
+  let showSpacing: boolean;
   let element: unknown;
   let enableCopy: boolean;
   let id: string;
@@ -72,6 +73,7 @@ describe('CardExpirationDateElement', () => {
     };
     validateOnChange = chance.bool();
     enableCopy = chance.bool();
+    showSpacing = chance.bool();
     inputMode = 'numeric';
     maxElapsedExpirationYear = chance.integer({ min: 1, max: 50 });
     onReady = jest.fn();
@@ -95,6 +97,7 @@ describe('CardExpirationDateElement', () => {
         autoComplete={autoComplete}
         copyIconStyles={copyIconStyles}
         disabled={disabled}
+        showSpacing={showSpacing}
         enableCopy={enableCopy}
         id={id}
         inputMode={inputMode}
@@ -125,6 +128,7 @@ describe('CardExpirationDateElement', () => {
         disabled,
         copyIconStyles,
         enableCopy,
+        showSpacing,
         autoComplete,
         readOnly,
         inputMode,
@@ -144,6 +148,30 @@ describe('CardExpirationDateElement', () => {
     expect(useListener).toHaveBeenCalledWith('focus', element, onFocus);
     expect(useListener).toHaveBeenCalledWith('blur', element, onBlur);
     expect(useListener).toHaveBeenCalledWith('keydown', element, onKeyDown);
+  });
+
+  test('should pass showSpacing prop to useElement', () => {
+    render(
+      <CardExpirationDateElement
+        showSpacing={false}
+        id={id}
+        onReady={onReady}
+      />
+    );
+
+    expect(useElement).toHaveBeenCalledWith(
+      id,
+      'cardExpirationDate',
+      { current: wrapperDiv },
+      expect.objectContaining({
+        targetId: id,
+        showSpacing: false,
+      }),
+      undefined,
+      // eslint-disable-next-line unicorn/no-null
+      null,
+      undefined
+    );
   });
 
   test('should pass maxElapsedExpirationYear prop to useElement', () => {

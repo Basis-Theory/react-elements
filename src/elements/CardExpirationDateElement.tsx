@@ -19,6 +19,7 @@ interface CardExpirationDateElementProps {
   bt?: BasisTheoryElements;
   copyIconStyles?: CopyIconStyles;
   disabled?: boolean;
+  showSpacing?: boolean;
   enableCopy?: boolean;
   id: string;
   inputMode?: `${InputMode}`;
@@ -48,6 +49,7 @@ const CardExpirationDateElementC: FC<
   bt,
   copyIconStyles,
   disabled,
+  showSpacing,
   elementRef,
   enableCopy,
   id,
@@ -80,6 +82,7 @@ const CardExpirationDateElementC: FC<
       autoComplete,
       copyIconStyles,
       disabled,
+      showSpacing,
       enableCopy,
       inputMode,
       maxElapsedExpirationYear,
