@@ -1,3 +1,9 @@
+## [2.17.0] - 2026-09-21
+
+### Features
+
+- 9d849ab 2026-09-21 feat(ENG-11715): add region option and uat and dev environments (#720) by mstrisoline@users.noreply.github.com
+
 ## [2.16.0] - 2026-09-14
 
 ### Features
