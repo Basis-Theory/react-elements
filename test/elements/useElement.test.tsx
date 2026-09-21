@@ -98,7 +98,7 @@ describe('useElement', () => {
     expect(result.current).toBeUndefined();
   });
 
-  test('should create and mount', () => {
+  test('should create and mount', async () => {
     const id = chance.string();
     const type = chance.pickone<ElementType>(['card', 'text']);
     const mockRef = { current: document.createElement('div') };
@@ -109,9 +109,129 @@ describe('useElement', () => {
 
     expect(bt.createElement).toHaveBeenCalledTimes(1);
     expect(bt.createElement).toHaveBeenCalledWith(type, {});
-    expect(mount).toHaveBeenCalledTimes(1);
+    await waitFor(() => expect(mount).toHaveBeenCalledTimes(1));
     expect(mount).toHaveBeenCalledWith(`#${id}`);
     expect(result.current).toBeDefined();
+  });
+
+  test('should unmount the element and clear the forwarded ref on cleanup', async () => {
+    const id = chance.string();
+    const type = chance.pickone<ElementType>(['card', 'text']);
+    const mockRef = { current: document.createElement('div') };
+    const objectRef = { current: null };
+
+    const { unmount: unmountHook } = renderHook(() =>
+      useElement(id, type, mockRef, {}, undefined, objectRef)
+    );
+
+    await waitFor(() => expect(mount).toHaveBeenCalledTimes(1));
+
+    const element = jest.mocked(bt.createElement).mock.results[0]
+      .value as unknown as { unmount: jest.Mock };
+
+    unmountHook();
+
+    expect(element.unmount).toHaveBeenCalledTimes(1);
+    expect(objectRef.current).toBeNull();
+  });
+
+  test('should not unmount an element whose mount never started', () => {
+    const element = { mount, update, mounted: false, unmount: jest.fn() };
+
+    jest.mocked(bt.createElement).mockReturnValue(element as never);
+
+    const mockRef = { current: document.createElement('div') };
+    const { unmount: unmountHook } = renderHook(() =>
+      useElement(chance.string(), 'card', mockRef, {})
+    );
+
+    unmountHook();
+
+    expect(mount).not.toHaveBeenCalled();
+    expect(element.unmount).not.toHaveBeenCalled();
+  });
+
+  test('should unmount an interrupted in-flight mount exactly once', async () => {
+    let resolveMount: () => void = () => undefined;
+    const pendingMount = new Promise<void>((resolve) => {
+      resolveMount = resolve;
+    });
+    const state = { mounted: false };
+    const element = {
+      get mounted() {
+        return state.mounted;
+      },
+      mount: jest.fn(() => {
+        state.mounted = true;
+        return pendingMount;
+      }),
+      unmount: jest.fn(() => {
+        state.mounted = false;
+      }),
+      update,
+    };
+
+    jest.mocked(bt.createElement).mockReturnValue(element as never);
+
+    const mockRef = { current: document.createElement('div') };
+    const { unmount: unmountHook } = renderHook(() =>
+      useElement(chance.string(), 'card', mockRef, {})
+    );
+
+    await waitFor(() => expect(element.mount).toHaveBeenCalledTimes(1));
+
+    unmountHook();
+
+    expect(element.unmount).toHaveBeenCalledTimes(1);
+
+    await act(async () => resolveMount());
+
+    expect(element.unmount).toHaveBeenCalledTimes(1);
+  });
+
+  test('should only mount the element kept by a Strict Mode effect replay', async () => {
+    const elements: Array<{
+      mounted: boolean;
+      mount: jest.Mock;
+      unmount: jest.Mock;
+    }> = [];
+
+    jest.mocked(bt.createElement).mockImplementation((() => {
+      const state = { mounted: false };
+      const element = {
+        get mounted() {
+          return state.mounted;
+        },
+        mount: jest.fn(() => {
+          state.mounted = true;
+          return Promise.resolve();
+        }),
+        unmount: jest.fn(() => {
+          state.mounted = false;
+        }),
+        update,
+      };
+
+      elements.push(element as never);
+
+      return element;
+    }) as never);
+
+    const mockRef = { current: document.createElement('div') };
+    const { unmount: unmountHook } = renderHook(
+      () => useElement(chance.string(), 'card', mockRef, {}),
+      { wrapper: React.StrictMode }
+    );
+
+    await waitFor(() => expect(elements).toHaveLength(2));
+
+    expect(elements[0].mount).not.toHaveBeenCalled();
+    expect(elements[0].unmount).not.toHaveBeenCalled();
+    await waitFor(() => expect(elements[1].mount).toHaveBeenCalledTimes(1));
+
+    unmountHook();
+
+    expect(elements[1].unmount).toHaveBeenCalledTimes(1);
   });
 
   test('should forward object ref to element on creation', async () => {
