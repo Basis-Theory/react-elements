@@ -31,6 +31,7 @@ interface CardExpirationDateElementProps {
   onKeyDown?: ElementEventListener<CardExpirationDateElementEvents, 'keydown'>;
   onReady?: ElementEventListener<CardExpirationDateElementEvents, 'ready'>;
   placeholder?: string;
+  preventScrollOnFocus?: boolean;
   readOnly?: boolean;
   style?: ElementStyle;
   title?: string;
@@ -62,6 +63,7 @@ const CardExpirationDateElementC: FC<
   onKeyDown,
   onReady,
   placeholder,
+  preventScrollOnFocus,
   readOnly,
   style,
   title,
@@ -87,6 +89,7 @@ const CardExpirationDateElementC: FC<
       inputMode,
       maxElapsedExpirationYear,
       placeholder,
+      preventScrollOnFocus,
       readOnly,
       style,
       targetId: id,

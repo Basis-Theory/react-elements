@@ -1,3 +1,9 @@
+## [2.18.0] - 2026-11-02
+
+### Features
+
+- 747b2705 2026-10-29 feat(ENG-13612): add preventScrollOnFocus option to input elements (#766) by kevin.rojas@basistheory.com
+
 ## [2.17.0] - 2026-09-21
 
 ### Features

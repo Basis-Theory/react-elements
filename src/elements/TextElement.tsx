@@ -25,6 +25,7 @@ interface BaseTextElementProps {
   onKeyDown?: ElementEventListener<TextElementEvents, 'keydown'>;
   onReady?: ElementEventListener<TextElementEvents, 'ready'>;
   placeholder?: string;
+  preventScrollOnFocus?: boolean;
   readOnly?: boolean;
   style?: ElementStyle;
   title?: string;
@@ -66,6 +67,7 @@ const TextElementC: FC<
   onReady,
   password,
   placeholder,
+  preventScrollOnFocus,
   readOnly,
   style,
   title,
@@ -89,6 +91,7 @@ const TextElementC: FC<
       maxLength,
       password,
       placeholder,
+      preventScrollOnFocus,
       readOnly,
       style,
       targetId: id,

@@ -37,6 +37,7 @@ interface CardNumberElementProps {
   onReady?: ElementEventListener<CardNumberElementEvents, 'ready'>;
   placeholder?: string;
   preSelectedNetworks?: Brand[];
+  preventScrollOnFocus?: boolean;
   readOnly?: boolean;
   skipLuhnValidation?: boolean;
   style?: ElementStyle;
@@ -70,6 +71,7 @@ const CardNumberElementC: FC<
   onReady,
   placeholder,
   preSelectedNetworks,
+  preventScrollOnFocus,
   readOnly,
   skipLuhnValidation,
   style,
@@ -101,6 +103,7 @@ const CardNumberElementC: FC<
       inputMode,
       placeholder,
       preSelectedNetworks,
+      preventScrollOnFocus,
       readOnly,
       skipLuhnValidation,
       style,

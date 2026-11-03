@@ -33,6 +33,7 @@ interface CardVerificationCodeElementProps {
   >;
   onReady?: ElementEventListener<CardVerificationCodeElementEvents, 'ready'>;
   placeholder?: string;
+  preventScrollOnFocus?: boolean;
   readOnly?: boolean;
   style?: ElementStyle;
   title?: string;
@@ -63,6 +64,7 @@ const CardVerificationCodeElementC: FC<
   onKeyDown,
   onReady,
   placeholder,
+  preventScrollOnFocus,
   readOnly,
   style,
   title,
@@ -87,6 +89,7 @@ const CardVerificationCodeElementC: FC<
       enableCopy,
       inputMode,
       placeholder,
+      preventScrollOnFocus,
       readOnly,
       style,
       targetId: id,

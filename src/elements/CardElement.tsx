@@ -39,6 +39,7 @@ interface CardElementProps {
   onKeyDown?: ElementEventListener<CardElementEvents, 'keydown'>;
   onReady?: ElementEventListener<CardElementEvents, 'ready'>;
   placeholder?: CardElementPlaceholder;
+  preventScrollOnFocus?: boolean;
   readOnly?: boolean;
   skipLuhnValidation?: boolean;
   style?: ElementStyle;
@@ -71,6 +72,7 @@ const CardElementC: FC<
   onKeyDown,
   onReady,
   placeholder,
+  preventScrollOnFocus,
   readOnly,
   skipLuhnValidation,
   style,
@@ -96,6 +98,7 @@ const CardElementC: FC<
       maxElapsedExpirationYear,
       preSelectedNetworks,
       placeholder,
+      preventScrollOnFocus,
       readOnly,
       skipLuhnValidation,
       style,
