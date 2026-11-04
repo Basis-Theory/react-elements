@@ -1,3 +1,9 @@
+## [2.18.1] - 2026-11-04
+
+### Bug Fixes
+
+- 67ca7a7c 2026-11-03 fix(ENG-13817): accept card-details responses without a primary brand (#765) by kevin@basistheory.com
+
 ## [2.18.0] - 2026-11-02
 
 ### Features
